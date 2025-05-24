@@ -1,5 +1,5 @@
 from ast import Return
-from Flask import Flask
+from flask import Flask
 
 App = Flask(__name__)
 
@@ -9,5 +9,4 @@ def index():
 
 if __name__ == '__main__':
     App.run(debug=True)
-            
-            
+
