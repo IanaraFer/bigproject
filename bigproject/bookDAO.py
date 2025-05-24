@@ -102,3 +102,10 @@ class BookDAO:
 
         
 bookDAO = BookDAO()
+
+mysql = {
+    'host': 'localhost',
+    'user': 'yourusername',
+    'password': 'yourpassword',
+    'database': 'yourdatabase'
+}
