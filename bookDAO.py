@@ -1,9 +1,7 @@
-# boook dao 
-# this is a demonstration a data layer that connects to a datbase
-# Author: Andrew Beatty
+# boookDAO
+import mydbconfig as cfg
 
 import mysql.connector
-import dbconfig as cfg
 class BookDAO:
     connection=""
     cursor =''
@@ -11,14 +9,14 @@ class BookDAO:
     user=       ''
     password=   ''
     database=   ''
-    
+
     def __init__(self):
         self.host=       cfg.mysql['host']
         self.user=       cfg.mysql['user']
         self.password=   cfg.mysql['password']
         self.database=   cfg.mysql['database']
 
-    def getcursor(self): 
+    def getcursor(self):
         self.connection = mysql.connector.connect(
             host=       self.host,
             user=       self.user,
@@ -31,20 +29,19 @@ class BookDAO:
     def closeAll(self):
         self.connection.close()
         self.cursor.close()
-         
-    def getAll(self):
-        cursor = self.getcursor()
-        sql="select * from book"
-        cursor.execute(sql)
-        results = cursor.fetchall()
-        returnArray = []
-        #print(results)
-        for result in results:
-            #print(result)
-            returnArray.append(self.convertToDictionary(result))
-        
-        self.closeAll()
-        return returnArray
+
+def getAll(self):
+    cursor = self.getcursor()
+    sql = "SELECT * FROM book"
+    cursor.execute(sql)
+    results = cursor.fetchall()
+
+    print("Fetched data:", results)  # ✅ Print fetched results for debugging
+
+    returnArray = [self.convertToDictionary(result) for result in results]
+    self.closeAll()
+    return returnArray
+
 
     def findByID(self, id):
         cursor = self.getcursor()
@@ -78,7 +75,7 @@ class BookDAO:
         cursor.execute(sql, values)
         self.connection.commit()
         self.closeAll()
-        
+
     def delete(self, id):
         cursor = self.getcursor()
         sql="delete from book where id = %s"
@@ -88,7 +85,7 @@ class BookDAO:
 
         self.connection.commit()
         self.closeAll()
-        
+
         #print("delete done")
 
     def convertToDictionary(self, resultLine):
@@ -97,8 +94,8 @@ class BookDAO:
         currentkey = 0
         for attrib in resultLine:
             book[attkeys[currentkey]] = attrib
-            currentkey = currentkey + 1 
+            currentkey = currentkey + 1
         return book
 
-        
+
 bookDAO = BookDAO()
