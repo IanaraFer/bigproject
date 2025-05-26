@@ -20,7 +20,7 @@ Perform more than CRUD operations on your data
 ## Installation Instructions
 
 ### Prerequisites
-- Python 3.7+
+- Python 3.13
 - MySQL database
 - PythonAnywhere account (if deploying there)
 - TMDB API account
