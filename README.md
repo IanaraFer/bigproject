@@ -88,10 +88,17 @@ Perform more than CRUD operations on your data
 ## References:
  
 https://www.ibm.com/think/topics/api
+
 https://en.wikipedia.org/wiki/API
+
 https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging#_basic_merge_conflicts
+
 https://flask.palletsprojects.com/en/latest/
+
 https://docs.sqlalchemy.org/en/20/
+
 https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xi-email-support
+
 https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xi-email-support
+
 https://help.pythonanywhere.com/pages/Flask/
