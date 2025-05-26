@@ -69,6 +69,7 @@ Perform more than CRUD operations on your data
    ```bash
    python 
 
+
 ## Deployment to PythonAnywhere
 
 1. Upload all files to your PythonAnywhere account
@@ -79,13 +80,13 @@ Perform more than CRUD operations on your data
 
 
 ## Troubleshooting
-- **Database connection issues**: Verify credentials in `dbconfig.py` and ensure MySQL service is running
+- **Database connection issues**: Verify credentials in `dbconfig.py` and ensure MySQL service is running, bookDAO and others...
 - **TMDB API errors**: Check your API key and bearer token, and verify your TMDB account is active
 - **Missing dependencies**: Run `pip install -r requirements.txt` to ensure all packages are installed
 
+
 ## References:
  
-
 https://www.ibm.com/think/topics/api
 https://en.wikipedia.org/wiki/API
 https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging#_basic_merge_conflicts
